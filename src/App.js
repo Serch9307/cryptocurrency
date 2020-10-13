@@ -63,9 +63,11 @@ function App() {
     // to avoid execution the first time
     if (currency === "" || cryptocurrency === "") {
       return;
+    } else {
+      // call the api to get the quote
+      callApi();
     }
-    // call the api to get the quote
-    callApi();
+    // eslint-disable-next-line
   }, [currency, cryptocurrency]);
 
   return (
